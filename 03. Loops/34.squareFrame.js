@@ -18,7 +18,6 @@ function squareFrame(n) {
     }
     console.log(row.join(' '));
   }
-  console.log('_________________');
 }
 
 squareFrame(1);

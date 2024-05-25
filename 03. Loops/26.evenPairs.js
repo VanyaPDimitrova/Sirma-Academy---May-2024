@@ -24,26 +24,26 @@ function printGeneratedPrimePairs(firstInitValue, secondInitValue, firstDiff, se
       console.log(`${firstPrimes[i]}${secondPrimes[j]}`);   
     }
   }
+
+  // find prime numbers in range [2, n]
+  function sieveOfEratosthenes(n) {
+    const numbersToN = Array.from({length: n - 1}, (value, index) => index + 2);
+
+    for (i = 0; numbersToN[i]**2 <= n; i++) {
+      let num = numbersToN[i];
+
+      for (j = num**2; j <= n; j+=num) {
+        let index = numbersToN.indexOf(j);
+
+        if (index > -1) {
+          numbersToN.splice(index, 1);
+        }
+      }
+    }
+
+  return numbersToN;
+  }
 }
 
 printGeneratedPrimePairs(10, 20, 5, 5);
 printGeneratedPrimePairs(10, 30, 9, 6);
-
-// find prime numbers in range [2, n]
-function sieveOfEratosthenes(n) {
-  const numbersToN = Array.from({length: n - 1}, (value, index) => index + 2);
-
-  for (i = 0; numbersToN[i]**2 <= n; i++) {
-    let num = numbersToN[i];
-
-    for (j = num**2; j <= n; j+=num) {
-      let index = numbersToN.indexOf(j);
-
-      if (index > -1) {
-        numbersToN.splice(index, 1);
-      }
-    }
-  }
-
- return numbersToN;
-}
