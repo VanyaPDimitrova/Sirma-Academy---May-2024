@@ -1,14 +1,13 @@
 function generatesThreeDigitCodes(firstLimit, secondLimit, thirdLimit) {
-  const secondDigitRange = [2, 3, 5, 7];
-  const secondDigits = secondDigitRange.filter(number => number <= secondLimit);
+  const secondDigitRange = [2, 3, 5, 7].filter(number => number <= secondLimit);
 
   for (let i = 2; i <= firstLimit; i+=2) {
-    for (let j = 0; j < secondDigits.length; j++) {
+    for (let j = 0; j < secondDigitRange.length; j++) {
       for (let k = 2; k <= thirdLimit; k+=2) {
         const code = [];
 
         code.push(i);
-        code.push(secondDigits[j]);
+        code.push(secondDigitRange[j]);
         code.push(k);
 
         console.log(code.join(' '));
