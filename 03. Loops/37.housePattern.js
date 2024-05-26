@@ -24,8 +24,6 @@ function housePattern(n) {
 
     console.log(row.join(''));
   }
-
-  console.log('____________');
 }
 
 housePattern(7);
