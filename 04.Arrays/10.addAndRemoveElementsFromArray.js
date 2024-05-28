@@ -3,10 +3,10 @@ function addAndRemoveElementsFromArray(commands) {
   let number = 0;
 
   for (const command of commands) {
+    number++;
     if (command == 'add') {
-      number++;
       resultArr.push(number);
-
+      
     } else if (command == 'remove') {
       resultArr.pop();
     }
