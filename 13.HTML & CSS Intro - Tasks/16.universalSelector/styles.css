@@ -1,0 +1,24 @@
+* {
+  background-color: rgb(227, 226, 226);
+}
+
+#firstArticle {
+  border: 6px ridge rgba(0, 0, 255, .6);
+  border-radius: 6px;
+}
+
+.navElement {
+  font-size: 1.4em;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
