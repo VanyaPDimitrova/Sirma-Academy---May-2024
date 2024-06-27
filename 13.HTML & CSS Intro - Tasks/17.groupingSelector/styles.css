@@ -1,0 +1,29 @@
+* {
+  background-color: rgb(248, 244, 244);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#firstArticle {
+  border: 4px ridge rgba(0, 0, 255, .6);
+  border-radius: 6px;
+}
+
+.navElement {
+  font-size: 1.4em;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+h1, h2, h3 {
+ text-decoration: underline;
+}
