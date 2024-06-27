@@ -1,0 +1,20 @@
+#firstArticle {
+  border: 2px solid blue;
+  border-radius: 6px;
+}
+
+.navElement {
+  font-size: 1.2em;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
