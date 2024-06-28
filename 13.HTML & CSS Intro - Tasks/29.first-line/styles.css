@@ -78,6 +78,14 @@ article {
   font-weight: 500;
 }
 
+.mainFooter {
+  padding: 10px 10px 50px 10px;
+  background-image: url(https://spisanie8.bg/uf/articles/2024/0620/16228/list_dsc5495-copy.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  font-weight: 500;
+}
+
 .blue {
   color: rgb(29, 132, 167);
 }
