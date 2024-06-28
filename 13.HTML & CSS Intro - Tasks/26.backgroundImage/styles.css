@@ -1,0 +1,96 @@
+body {
+  background-color: rgb(248, 244, 244);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  text-decoration: underline;
+  font-weight: 900;
+}
+
+h1 {
+  padding: 14px;
+  text-align: center;
+}
+
+header {
+  background-image: url(https://spisanie8.bg/uf/articles/2024/0620/16228/list_dsc5495-copy.jpg);
+  background-position: -70px 0;
+}
+
+#firstArticle {
+  border: 4px ridge rgba(29, 132, 167, .6);
+  border-radius: 6px;
+}
+
+#secondArticle {
+  border: 4px ridge rgba(56, 156, 56, .6);
+  border-radius: 6px;
+}
+
+nav {
+  margin: 50px 0;
+  background-color: rgb(207, 207, 178);
+  padding: 10px 5px;
+  border: 4px ridge rgba(207, 207, 178, .6);
+  border-radius: 6px;
+}
+
+.navigation {
+  list-style-type: none;
+}
+
+.navElement {
+  font-size: 1.4em;
+  display: inline;
+  cursor: pointer;
+  padding: 1em;
+  margin: 0 20px;
+}
+
+.navElement:hover {
+  text-decoration: underline dashed;
+}
+
+article {
+  padding: 10px;
+  margin: 30px 0;
+}
+
+.articleMain {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: 500;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+#firstArticle h2, #firstArticle h3 {
+  color: rgb(29, 132, 167);
+}
+
+#secondArticle h2 {
+  color: rgb(56, 156, 56);
+}
+
+.author {
+  font-style: oblique;
+  font-weight: 500;
+}
+
+.blue {
+  color: rgb(29, 132, 167);
+}
+
+.red {
+  color: rgb(243, 47, 47);
+}
+
+.green {
+  color: rgb(56, 156, 56);
+}
+
