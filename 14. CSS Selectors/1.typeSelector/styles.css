@@ -1,0 +1,12 @@
+h1, h2 {
+  color: green;
+}
+
+p {
+  color: blue;
+  font-weight: bold;
+}
+
+div {
+  color: red;
+}
