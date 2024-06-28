@@ -1,0 +1,9 @@
+.parent {
+  width: 60%;
+  background-color: rgb(233, 220, 170);
+}
+
+.child {
+  width: 50%;
+  background-color: cadetblue;
+}
