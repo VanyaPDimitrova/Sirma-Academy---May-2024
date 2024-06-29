@@ -1,0 +1,11 @@
+/* html {
+  font-size: 16px;
+} */
+
+html {
+  font-size: 20px;
+}
+
+.rem-size {
+  font-size: 2rem;
+}
