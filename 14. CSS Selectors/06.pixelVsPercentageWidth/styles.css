@@ -1,0 +1,13 @@
+body {
+  font-size: xx-large;
+}
+
+.fixed-width {
+  width: 300px;
+  background-color: cadetblue;
+}
+
+.percentage-width {
+  width: 50%;
+  background-color: burlywood;
+}
