@@ -1,0 +1,14 @@
+p {
+  font-size: 25px;
+  background-color: rgb(172, 142, 200);
+}
+
+.highlight {
+  font-size: 50px;
+  background-color: rgb(158, 65, 65);
+}
+
+#unique {
+  font-size: 15px;
+  background-color: rgb(105, 176, 33);
+}
