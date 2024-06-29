@@ -1,0 +1,10 @@
+.parent > p {
+  font-size: 30px;
+  background-color: burlywood;
+}
+
+div > p {
+  font-size: 20px;
+  background-color: cadetblue;
+}
+
