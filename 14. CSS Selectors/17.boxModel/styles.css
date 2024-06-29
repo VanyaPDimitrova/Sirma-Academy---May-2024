@@ -1,0 +1,17 @@
+.box {
+  margin: 20px;
+
+  border-width: 15px;
+  border-style: groove;
+  border-color: cadetblue;
+  border-radius: 18px;
+
+  padding: 10px 20px 30px 20px;
+
+  color: brown;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 28px;
+  font-weight: 600;
+  font-style: oblique;
+  width: 40%;
+}
