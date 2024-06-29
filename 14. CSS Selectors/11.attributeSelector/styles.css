@@ -1,0 +1,28 @@
+body {
+  background-color: bisque;
+  font-size: 17px;
+}
+
+::placeholder {
+  color: brown;
+  opacity: 0.3;
+}
+
+input[type="text"] {
+  font-size: 1em;
+  margin: 15px;
+  background-color: rgba(130, 150, 237, 0.312);
+  color: rgb(169, 103, 17);
+}
+
+input[type="submit"] {
+  background-color: cornflowerblue;
+  font-size: 1.2em;
+  border-color: cornflowerblue;
+  font-weight: 600;
+  color: rgb(169, 103, 17);
+}
+
+a[href="https://example.com"] {
+  color: brown;
+}
