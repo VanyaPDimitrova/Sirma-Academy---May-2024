@@ -1,0 +1,10 @@
+.width-example {
+  /* width: 700px; */
+  min-width: 600px;
+  max-width: 1000px;
+
+  background-color: cadetblue;
+  color: brown;
+  font-size: 25px;
+  margin: 40px 5px;
+}
