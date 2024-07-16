@@ -1,0 +1,35 @@
+.flex-container {
+    background-color: antiquewhite;
+    height: 500px;
+
+    display: flex;   
+    flex-direction: row;                  /*default: row */
+    flex-wrap: wrap;                   /*default: nowrap */
+    /* flex-flow: row wrap;   Combines direction and wrap*/ 
+    justify-content: space-evenly; /*default: flex-start */
+    align-items: center;            /*default: stretch */
+    /* align-content: center;   */     /*default: normal */
+    gap: 24px;
+}
+
+.flex-item {
+    padding: 10px;
+    margin: 5px;
+    /* min-width: 25%; */
+    /* height: 3em; */
+    background-color: aqua;
+    align-content: center;             
+
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 30px;
+}
+
+.flex-item-2 {
+    order: -1;
+    align-self: stretch;
+}
+
+.flex-item-3 {
+    order: 2;
+}
