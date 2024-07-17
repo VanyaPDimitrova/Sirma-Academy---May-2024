@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+        }
+    </style>
+    <title>Global Context</title>
+</head>
+<body>
+    <h1>Global Context</h1>
+
+    <p>
+        The function context is the object that "has" the currently executed code.
+    </p>
+    <p>
+        Function context === <strong>this</strong> object
+    </p>
+
+    <button id="functionHandler">functionHandler</button>
+    <button id="arrowFunctionHandler">arrowFunctionHandler</button>
+    <button id="fromObjectFunctionHandler">fromObjectFunctionHandler</button>
+    <button id="fromObjectArrowFunctionHandler">fromObjectArrowFunctionHandler</button>
+
+    
+    <script>
+        //Event handler context
+        function functionHandler() {
+            const result = document.createElement('p');
+            result.textContent = `functionHandler:  ${this}`;
+            document.body.appendChild(result);
+
+            console.log('firstHandler', this);
+        }
+
+        const arrowFunctionHandler = () => {
+            const result = document.createElement('p');
+            result.textContent = `arrowFunctionHandler:  ${this}`;
+            document.body.appendChild(result);
+
+            console.log('arrowFunctionHandler', this);
+        }
+
+        const eventHandlers = {
+            fromObjectFunctionHandler() {
+                const result = document.createElement('p');
+                result.textContent = `fromObjectFunctionHandler:  ${this}`;
+                document.body.appendChild(result);
+
+                console.log('fromObjectFunctionHandler', this);
+            },
+
+            fromObjectArrowFunctionHandler: () => {
+                const result = document.createElement('p');
+                result.textContent = `fromObjectArrowFunctionHandler:  ${this}`;
+                document.body.appendChild(result);
+
+                console.log('fromObjectArrowFunctionHandler', this);
+            }
+        }
+
+        const fromFunctionButton = document.getElementById('functionHandler');
+        fromFunctionButton.addEventListener('click', functionHandler);
+
+        const fromArrowFunctionButton = document.getElementById('arrowFunctionHandler');
+        fromArrowFunctionButton.addEventListener('click', arrowFunctionHandler);
+
+        const fromObjectFunctionButton = document.getElementById('fromObjectFunctionHandler');
+        fromObjectFunctionButton.addEventListener('click', eventHandlers.fromObjectFunctionHandler);
+
+        const fromObjectArrowFunctionButton = document.getElementById('fromObjectArrowFunctionHandler');
+        fromObjectArrowFunctionButton.addEventListener('click', eventHandlers.fromObjectArrowFunctionHandler);
+
+    </script>
+</body>
+</html>
