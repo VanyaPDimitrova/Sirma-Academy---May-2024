@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+        }
+    </style>
+    <title>Global Context</title>
+</head>
+<body>
+    <h1>Global Context</h1>
+
+    <p>
+        The function context is the object that "has" the currently executed code.
+    </p>
+    <p>
+        Function context === <strong>this</strong> object
+    </p>
+
+    
+    <script>
+        // global context
+        console.log('this ', this);
+        console.log('globalThis', globalThis);
+        console.log('window', window);
+
+
+        // Global function execution
+        const printContextArrow = () => {
+            console.log('printContextArrow', this);
+        }
+        printContextArrow();
+
+        function printContext() {
+            console.log('printContext', this);
+            printContextArrow();
+        }
+        printContext();
+
+
+        // Method execution
+        const employee ={
+            name: 'Pesho',
+            work() {
+                console.log('Work work work work work ...');
+                console.log(this);
+            }
+        }
+        employee.work();
+
+
+        // Execute method as global execution
+        const workOut = employee.work;
+        workOut();
+
+
+        // Example with inner function
+        const person = {
+            name: 'Gosho',
+            outer() {
+                console.log('outer', this);
+                
+                function inner() {
+                    console.log('inner', this);
+                }
+
+                inner();
+            }
+        }
+
+        person.outer();
+
+
+        // Using arrow function as inner function
+        const personWithInnerArrow = {
+            name: 'Stamat',
+            outerArrow() {
+                console.log('outerArrow', this);
+                
+                const innerArrow = () => console.log('innerArrow', this);
+                
+
+                innerArrow();
+            }
+        }
+
+        personWithInnerArrow.outerArrow();
+    </script>
+
+</body>
+</html>
