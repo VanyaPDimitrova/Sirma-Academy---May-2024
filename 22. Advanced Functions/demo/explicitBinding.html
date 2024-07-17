@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+        }
+    </style>
+    <title>Explicit Binding</title>
+</head>
+<body>
+    <h1>Global Context</h1>
+
+    <p>
+        The function context is the object that "has" the currently executed code.
+    </p>
+    <p>
+        Function context === <strong>this</strong> object
+    </p>
+
+    <script>
+        // Explicit Binding
+        // Three ways to set context explicitly
+
+        //--- 1. method call(); ---
+        /* 
+            1. call executes the function immediately
+            2. call changes the context with provided
+            3. call can pass one ore more arguments
+        */  
+        function callHandler(arg1, arg2) {
+            console.log('callHandler: ', this, arg1, arg2);
+        }
+
+        const callContext = {
+            name: 'Call Context'
+        };
+
+        callHandler.call(callContext, 'is from ', 'call binding');
+
+
+        //--- 2. method apply(); ---
+        // The diff from call is that we pass the argument as array
+        function applyHandler(arg1, arg2) {
+            console.log('applyContext: ', this, arg1, arg2);
+        }
+
+        const applyContext = {
+            name: 'Apply Context'
+        };
+
+        applyHandler.apply(applyContext, ['is from ', 'apply binding']);
+
+
+    // -------- call and apply dose not works on arrow function --------
+        const arrowHandler = (arg) => {
+            console.log('arrowHandler: ', this, arg);
+        }
+
+        const arrowContext = {
+            name: 'Apply Context'
+        };
+
+        arrowHandler.call(arrowContext, 'call dose not work on arrow function');
+        arrowHandler.apply(arrowContext, ['apply dose not work on arrow function']);
+    // -------- call and apply dose not works on arrow function --------
+
+
+        //--- 3. method bind(); ---
+          /* 
+            1. bind does NOT execute the function immediately
+                It returns a reference to a new function
+                !!! WORKS on arrow function !!!
+            2. bind changes the context with provided
+            3. bind can pass one ore more arguments
+        */ 
+        const bindHandler = {
+            name: 'Bind Handler',
+            bindMethod(arg) {
+                console.log('bindMethod: ', this, arg);
+            },
+            bindArrowMethod(arg) {
+                console.log('bindArrowMethod: ', this, arg);
+            },
+        };
+
+        const bindContext = {
+            name: 'Bind Context'
+        };
+
+        const bindFunction = bindHandler.bindMethod.bind(bindContext, 'Bind does NOT execute the function immediately, It returns a reference to a new function.');
+        const bindArrowFunction = bindHandler.bindArrowMethod.bind(bindContext, 'Bind does NOT execute the function immediately. It returns a reference to a new function. !!! WORKS on arrow function !!!');
+
+        bindFunction();
+        bindArrowFunction();
+
+    </script>
+    
+</body>
+</html>
