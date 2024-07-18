@@ -12,5 +12,9 @@ document.getElementById('add-button').addEventListener('click', function() {
         list.appendChild(listItem);
         input.value = '';
 
+        const deleteButton = document.createElement('button');
+        listItem.appendChild(deleteButton);
+        deleteButton.textContent = 'Remove';
+        deleteButton.addEventListener('click', (e) => list.removeChild(e.currentTarget.parentElement));
     }
 });
