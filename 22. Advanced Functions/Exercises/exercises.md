@@ -16,6 +16,7 @@ const obj2 = {
 };
 ```
 
+
 ### 2.	Using call to Chain Constructors.
 Create two constructor functions. In the first constructor, use call to chain the second constructor, passing in arguments from the first constructor.
 
@@ -25,12 +26,13 @@ function Person(name) {
 }
 
 function Employee(name, job) {
-// ....
+  // ....
 }
 
 const emp = new Employee('Alice', 'Engineer');
 console.log(emp); // Output: Employee { name: 'Alice', job: 'Engineer' }
 ```
+
 
 ### 3.	Using bind for Partial Application.
 Create a function that multiplies two numbers. Use bind to create a new function that always multiplies by a specific number.
@@ -44,6 +46,7 @@ function multiply(a, b) {
 console.log(multiplyByFive(3)); // Output: 15
 ```
 
+
 ### 4.	Function Composition.
 Create two functions, one that doubles a number and one that squares a number. Create a third function that composes these two functions to first double and then square a number.
 
@@ -53,6 +56,7 @@ const doubleThenSquare = compose(double, square);
 
 console.log(doubleThenSquare(3)); // Output: 36
 ```
+
 
 ### 5.	Closure for Data Privacy
 Create a function that returns an object with two methods: one to get a private variable and one to set it. Use a closure to maintain the private variable.
@@ -116,7 +120,7 @@ console.log(fibonacci()); // 21
 ### 10.	TODO List *
 Write JavaScript to add new tasks to the list when the button is clicked.
 Each task should have a "Remove" button to delete the task from the list.
-NB: Check how to add Event Listener to your remove button
+NB: Check how to add Event Listener to your remove button.
 
 ```
 <!DOCTYPE html>
