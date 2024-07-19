@@ -1,0 +1,49 @@
+html {
+    --ratio: 1.2;
+    --size-large: calc(1rem * var(--ratio) * var(--ratio));
+    --size-med: calc(1rem * var(--ratio));
+    
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: var(--size-large);
+}
+
+.intro-text {
+    font-size: var(--size-med);
+}
+
+ul {
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    padding: 1rem 0;
+}
+
+@media ( min-width: 400px ) {
+
+    html {
+        --ratio: 1.4;
+    }
+
+    h1 {
+        color: green;
+    }
+
+}
+
+@media ( min-width: 600px ) {
+
+    ul {
+        border-top: none;
+    }
+
+}
+
+@media ( min-width: 650px ) {
+
+    .intro-text {
+        display: none;
+    }
+
+}
