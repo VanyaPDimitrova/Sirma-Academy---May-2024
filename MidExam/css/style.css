@@ -69,6 +69,7 @@ section {
     font-family: var(--main-font);
 }
 
+
 main {
     max-width: 1400px;
     margin: 0 auto;
@@ -84,6 +85,7 @@ header {
     position: fixed;
     width: 100%;
     background: var(--background-color-black);
+    z-index: 10;
 }
 
 nav {
@@ -94,7 +96,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
 }
 
 nav ul {
@@ -117,7 +118,7 @@ nav ul li a {
 }
 
 
-/* header section ----*/
+/* header section */
 .header {
     min-height: 713px;
     background-color: var(--background-color-black);
@@ -159,7 +160,6 @@ nav ul li a {
     font-family: var(--second-font);
     text-align: left;
     margin: 30px 0;
-    z-index: 0;
 }
 
 .template button {
@@ -245,11 +245,6 @@ nav ul li a {
 }
 
 
-
-
-
-
-
 /* brandBar section */
 .brandBar {
     min-height: 105px;
@@ -279,6 +274,41 @@ nav ul li a {
     gap: 30px;
 }
 
+
+
+
+
+/* features section */
+.features {
+    padding: 0;
+    min-height: 1715px;
+    background-color: var(--background-color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features .container {
+    padding: 0 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.features .container.first {
+    min-height: 595px;
+    background-color: var(--background-color-gray-lite);
+}
+
+.features .container.second {
+    min-height: 596px;
+    background-color: var(--background-color-white);
+}
+
+.features .container.third {
+    min-height: 524px;
+    background-color: var(--background-color-gray-lite);
+}
 
 
 
