@@ -309,9 +309,15 @@ nav ul li a {
     color: #FF9B51;
 }
 
+
+
 .features .container.second-feature {
     min-height: 596px;
     background-color: var(--background-color-white);
+}
+
+i.fa-circle {
+    padding-top: 5px;
 }
 
 .features .container.third-feature {
