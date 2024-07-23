@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+/* 398 */
 html{
     /* font families*/
     --main-font: "Open Sans";
@@ -21,6 +21,7 @@ html{
     --background-color-black-opacity: rgba(0, 0, 0, 0.4);
     --background-color-white: #fff;
     --background-color-gray: #ccc;
+    --background-color-gray-form-divider: #D6D6D6;
     --background-color-orange-lite: #FF9B51;
     --background-color-orange: #ff8b38;
     --background-color-gray-lite: #f5f5f5;
@@ -83,6 +84,26 @@ main {
     background-color: var(--background-color-white);
 }
 
+.form-field-divider {
+    height: 1px;
+    filter: drop-shadow(0px 1px 0px rgba(0,0,1,0.16));
+    background-color: var(--background-color-gray-form-divider);
+    padding: 0 38px;
+}
+
+.divider-small-white {
+    background-color: var(--background-color-white);
+    max-width: 64px;
+    height: 2px;
+    margin: 10px 5px; 
+}
+
+.divider-small-orange {
+    background-color: var(--background-color-orange);
+    max-width: 64px;
+    height: 2px;
+    margin: 10px 5px; 
+}
 
 /* --- navigation --- */
 header {
@@ -144,12 +165,6 @@ nav ul li a {
 .header .container .header-template h1 {
     color: var(--font-color-white);
     margin: 30px 0;
-}
-
-.header .container .header-template .divider {
-    max-width: 64px;
-    height: 2px;
-    margin: 10px 5px;
 }
 
 .header .container .header-template p {
@@ -227,11 +242,11 @@ nav ul li a {
     color: var(--font-color-gray-lite);
   }
 
-.input-container .divider {
-    height: 1px;
-    background-color: var(--font-color-gray-lite);
+/* .input-container .divider {
+    filter: drop-shadow(0px 1px 0px rgba(0,0,1,0.16));
+    background-color: var(--background-color-gray-form-divider);
     padding: 0 38px;
-}
+} */
 
 .signup-header-form button {
     height: 54px;
@@ -322,9 +337,6 @@ i.fa-circle {
     background-color: var(--background-color-white);
 }
 
-.ourProcess .container {
-
-}
 
 
 /* --- pricing --- */
@@ -333,9 +345,6 @@ i.fa-circle {
     background-color: var(--background-color-gray-lite);
 }
 
-.pricing .container {
-    
-}
 
 
 /* --- testimonials --- */
@@ -344,9 +353,6 @@ i.fa-circle {
     background-color: var(--background-color-white);
 }
 
-.testimonials .container {
-    
-}
 
 
 /* --- custom section --- */
@@ -357,9 +363,8 @@ i.fa-circle {
     background-position: left 50% top 20%;
 }
 
-.customSection .container {
-    
-}
+
+
 
 
 /* --- contact us --- */
@@ -368,9 +373,6 @@ i.fa-circle {
     background-color: var(--background-color-white);
 }
 
-.contactUs .container {
-    
-}
 
 
 /* --- footer --- */
