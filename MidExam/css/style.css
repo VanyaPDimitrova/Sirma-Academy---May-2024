@@ -18,11 +18,12 @@ html{
 
     /* background colors */
     --background-color-black: #000;
+    --background-color-black-opacity: rgba(0, 0, 0, 0.4);
     --background-color-white: #fff;
     --background-color-gray: #ccc;
     --background-color-orange-lite: #FF9B51;
     --background-color-orange: #ff8b38;
-    --background-color-gray-lite: #f5f5f5;;
+    --background-color-gray-lite: #f5f5f5;
 
 }
 
@@ -38,7 +39,9 @@ body {
 section {
     padding: 0 140px;
     min-height: 500px;
-    background-color: cadetblue;   /* ДА СЕ МАХНЕ!!!*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container {
@@ -80,11 +83,12 @@ main {
     background-color: var(--background-color-white);
 }
 
-/* navigation */
+
+/* --- navigation --- */
 header {
     position: fixed;
     width: 100%;
-    background: var(--background-color-black);
+    background-color: var(--background-color-black);
     z-index: 10;
 }
 
@@ -118,15 +122,12 @@ nav ul li a {
 }
 
 
-/* header section */
+/* --- header section --- */
 .header {
     min-height: 713px;
     background-color: var(--background-color-black);
     background-image: url("/assets/header-section.png");
     background-position: left 20% top 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .header .container {
@@ -245,14 +246,11 @@ nav ul li a {
 }
 
 
-/* brandBar section */
+/* --- brandBar section --- */
 .brandBar {
     min-height: 105px;
     filter: drop-shadow(0px 1px 1.5px rgba(0,0,0,0.38));
     background-color: var(--background-color-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .brandBar .container {
@@ -275,17 +273,11 @@ nav ul li a {
 }
 
 
-
-
-
-/* features section */
+/* --- features section --- */
 .features {
     padding: 0;
     min-height: 1715px;
     background-color: var(--background-color-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .features .container {
@@ -309,8 +301,6 @@ nav ul li a {
     color: #FF9B51;
 }
 
-
-
 .features .container.second-feature {
     min-height: 596px;
     background-color: var(--background-color-white);
@@ -326,9 +316,64 @@ i.fa-circle {
 }
 
 
+/* --- our process --- */
+.ourProcess {
+    min-height: 592px;
+    background-color: var(--background-color-white);
+}
+
+.ourProcess .container {
+
+}
 
 
-/* footer */
+/* --- pricing --- */
+.pricing {
+    min-height: 883px;
+    background-color: var(--background-color-gray-lite);
+}
+
+.pricing .container {
+    
+}
+
+
+/* --- testimonials --- */
+.testimonials {
+    min-height: 591px;
+    background-color: var(--background-color-white);
+}
+
+.testimonials .container {
+    
+}
+
+
+/* --- custom section --- */
+.customSection {
+    min-height: 320px;
+    background-image: url("/assets/custom-section.png");
+    background-color: var(--background-color-black);
+    background-position: left 50% top 20%;
+}
+
+.customSection .container {
+    
+}
+
+
+/* --- contact us --- */
+.contactUs {
+    min-height: 612px;
+    background-color: var(--background-color-white);
+}
+
+.contactUs .container {
+    
+}
+
+
+/* --- footer --- */
 footer {
     width: 100%;
     min-height: 100px;
@@ -337,7 +382,7 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
 }
 
