@@ -93,19 +93,20 @@ main {
 
 .divider-small-white {
     background-color: var(--background-color-white);
-    max-width: 64px;
+    width: 64px;
     height: 2px;
     margin: 30px 0; 
 }
 
 .divider-small-orange {
     background-color: var(--background-color-orange);
-    min-width: 64px;
+    width: 64px;
     height: 2px;
     margin: 30px 0; 
 }
 
-.template-bkgr-light {
+.template-bkgr-light,
+.template-bkgrd-img {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,17 +116,21 @@ main {
     color: var(--font-color-black-light);
 }
 
-.template-bkgrd-img {
-    display: flex;
-    flex-direction: column;
-}
-
 .template-bkgrd-img h1 {
     color: var(--font-color-white);
 }
 
-/* .submit-btn {
+.template-bkgrd-img p {
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--font-color-white);
+    font-weight: 300;
+    font-family: var(--second-font);
+}
 
+/* .submit-btn {
+ 
 }
 
 .download-btn {
@@ -188,29 +193,17 @@ nav ul li a {
     justify-content: space-between;
 }
 
-.header .container .header-template {
-    display: flex;
-    flex-direction: column;
+.header .container .template-bkgrd-img {
+    align-items: flex-start;
     max-width: 526px;
 }
 
-.header .container .header-template h1 {
+.header .container .template-bkgrd-img h1 {
     color: var(--font-color-white);
-    margin: 30px 0;
+    margin: 30px 0 10px 0;
 }
 
-.header .container .header-template p {
-    opacity: 0.8;
-    font-size: 16px;
-    line-height: 23px;
-    color: var(--font-color-white);
-    font-weight: 300;
-    font-family: var(--second-font);
-    text-align: left;
-    margin: 30px 0;
-}
-
-.header .container .header-template button {
+.header .container .template-bkgrd-img button {
     width: 136px;
     height: 44px;
     background-color: transparent;
@@ -220,7 +213,7 @@ nav ul li a {
     color: var(--font-color-white);
     font-weight: 600;
     font-family: var(--main-font);
-    margin: 14px 4px;
+    margin-top: 44px;
 }
 
 .header .container .header-form-container{
