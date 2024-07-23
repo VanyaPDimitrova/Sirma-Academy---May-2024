@@ -386,11 +386,18 @@ i.fa-circle {
     text-align: center;
 }
 
+.ourProcess-cards .fa-stack i {
+    padding-top: 5px;
+}
+
+
+
 /* --- pricing --- */
 .pricing {
     min-height: 883px;
     background-color: var(--background-color-gray-light);
 }
+
 
 
 
