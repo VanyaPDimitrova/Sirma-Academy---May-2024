@@ -127,13 +127,23 @@ main {
     color: var(--font-color-white);
     font-weight: 300;
     font-family: var(--second-font);
+    margin-top: 10px;
 }
 
-/* .submit-btn {
- 
+.submit-btn {
+    width: 136px;
+    height: 44px;
+    background-color: transparent;
+    border: 2px solid var(--background-color-white);
+    border-style: ridge;
+    font-size: 15px;
+    color: var(--font-color-white);
+    font-weight: 600;
+    font-family: var(--main-font);
+    margin-top: 32px;
 }
 
-.download-btn {
+/* .download-btn {
 
 }
 
@@ -200,19 +210,10 @@ nav ul li a {
 
 .header .container .template-bkgrd-img h1 {
     color: var(--font-color-white);
-    margin: 30px 0 10px 0;
+    margin: 32px 0 10px 0;
 }
 
 .header .container .template-bkgrd-img button {
-    width: 136px;
-    height: 44px;
-    background-color: transparent;
-    border: 2px solid var(--background-color-white);
-    border-style: ridge;
-    font-size: 15px;
-    color: var(--font-color-white);
-    font-weight: 600;
-    font-family: var(--main-font);
     margin-top: 44px;
 }
 
