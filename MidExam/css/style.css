@@ -378,6 +378,35 @@ i.fa-circle {
     background-color: var(--background-color-white);
 }
 
+.testimonials .container {
+    gap: 54px;
+}
+
+.testimonials .container .testimonial-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+p.testimonial-content {
+    background-image: url(/assets/u229.png);
+    background-repeat: no-repeat;
+    max-width: 252px;
+    padding: 16px 12px 36px 12px;
+    text-align: left;
+}
+
+.client-information {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.client-information .client {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
 
 
 /* --- custom section --- */
@@ -388,9 +417,6 @@ i.fa-circle {
     background-image: url("/assets/custom-section.png");
     background-position: left 50% top 20%;
 }
-
-
-
 
 
 /* --- contact us --- */
@@ -448,9 +474,6 @@ i.fa-circle {
     font-family: var(--main-font);
     height: 100%;
 }
-
-
-
 
 
 /* --- footer --- */
