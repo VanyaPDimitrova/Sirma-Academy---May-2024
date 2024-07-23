@@ -303,13 +303,16 @@ nav ul li a {
     margin-bottom: 12px;
 }
 
-.media-links{
+.media-links {
     font-size: 47px;
-    color: var(--font-color-gray-dark);
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 30px;
+}
+
+.media-links i {
+    color: var(--font-color-social-media);
 }
 
 
