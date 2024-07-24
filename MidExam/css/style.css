@@ -80,6 +80,55 @@ main {
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1024px) {
+    section {
+        padding: 0 70px;
+    }
+
+    header nav {
+        padding: 0 70px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    header nav {
+        max-width: 400px;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 0 10px;
+    }
+
+
+/* --- brandBar section --- */
+    main .brandBar {
+        min-height: 140px;
+    }
+
+    main .brandBar .container {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main .brandBar .container .media-links {
+        font-size: 34px;
+        font-weight: 700;
+        display: flex;
+        gap: 22px;
+    }
+
+}
+
 
 .divider {
     height: 1px;
@@ -390,9 +439,6 @@ i.fa-circle {
 }
 
 
-
-
-
 /* --- pricing --- */
 .pricing {
     min-height: 883px;
@@ -475,8 +521,6 @@ i.fa-circle {
     background-color: var(--background-color-white);
     border-top: 1px solid var(--background-color-gray-light);
 }
-
-
 
 
 /* --- testimonials --- */
