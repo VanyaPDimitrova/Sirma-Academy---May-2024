@@ -14,17 +14,19 @@ html{
     --font-color-black-light: #212121;
     --font-color-black: #000;
     --font-color-white: #fff;
+    --font-color-white-opacity: rgba(255, 255, 255, );
     --font-color-orange: #ff8b38;
 
     /* background colors */
-    --background-color-black: #000;
-    --background-color-black-opacity: rgba(0, 0, 0, 0.4);
-    --background-color-white: #fff;
     --background-color-gray: #ccc;
     --background-color-gray-form-divider: #D6D6D6;
+    --background-color-gray-light: #f5f5f5;
+    --background-color-gray-dark: #333;
+    --background-color-black: #000;
+    --background-color-black-opacity: rgba(0, 0, 0, 0.502);
+    --background-color-white: #fff;
     --background-color-orange-light: #FF9B51;
     --background-color-orange: #ff8b38;
-    --background-color-gray-light: #f5f5f5;
 
 }
 
@@ -60,6 +62,7 @@ section {
 
 .container h3 {
     font-size: 20px;
+    line-height: 24px;
     color: var(--font-color-gray-dark);
     font-weight: 700;
 }
@@ -70,12 +73,6 @@ section {
     color: var(--font-color-main);
     font-weight: 400;
     font-family: var(--main-font);
-}
-
-@media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
 }
 
 main {
@@ -293,6 +290,8 @@ nav ul li a {
     background-color: var(--background-color-white);
 }
 
+
+
 .brandBar .container {
     flex-direction: row;
     justify-content: space-between;
@@ -372,10 +371,10 @@ i.fa-circle {
 .ourProcess-cards {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
 }
 
 .ourProcess-cards .card {
+    max-width: 354px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -392,10 +391,89 @@ i.fa-circle {
 
 
 
+
+
 /* --- pricing --- */
 .pricing {
     min-height: 883px;
     background-color: var(--background-color-gray-light);
+}
+
+.pricing .container {
+    gap: 80px;
+}
+
+.pricing .container .pricing-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.pricing-plan .black {
+    min-width: 342px;
+    text-align: center;
+    align-content: center;
+    background-color: var(--background-color-gray-dark);
+    color: var(--font-color-white);
+}
+
+.pricing-plan .black.title {
+    min-height: 59px;
+    font-size: 30px;
+    line-height: 24px;
+    align-content: center;
+    font-family: var(--second-font);
+    border-bottom: 1px solid var(--background-color-white);
+}
+
+.pricing-plan .black.title h3 {
+    color: var(--font-color-white);
+}
+
+.pricing-plan .black.price {
+    min-height: 90px;
+    align-content: end;
+    padding-bottom: 5px;
+}
+
+.pricing-plan .black.price h1 {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.pricing-plan .black.price h1 strong {
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.pricing-plan .black.opacity {
+    min-height: 51px;
+    color: var(--font-color-white-opacity);
+    border-top: 1px solid var(--background-color-white);
+}
+
+.pricing-plan .orange {
+    min-height: 5px;
+    MAX-height: 60px;
+    min-width: 342px;
+    text-align: center;
+    align-content: center;
+    text-transform: uppercase;
+    background-color: var(--background-color-orange);
+}
+
+.pricing-plan .orange p {
+    padding: 10px;
+}
+
+.pricing-plan .white {
+    min-height: 40px;
+    min-width: 342px;
+    text-align: center;
+    align-content: center;
+    text-transform: uppercase;
+    background-color: var(--background-color-white);
+    border-top: 1px solid var(--background-color-gray-light);
 }
 
 
@@ -413,7 +491,6 @@ i.fa-circle {
 
 .testimonials .container .testimonial-cards {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
