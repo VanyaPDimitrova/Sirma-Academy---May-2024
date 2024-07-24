@@ -130,6 +130,7 @@ main {
 }
 
 
+/* --- dividers --- */
 .divider {
     height: 1px;
     background-color: var(--background-color-white);
@@ -156,6 +157,14 @@ main {
     margin: 30px 0; 
 }
 
+
+/* --- fa icons --- */
+.fa-stack i {
+    padding-top: 5px;
+}
+
+
+/* --- common templates --- */
 .template-bkgr-light,
 .template-bkgrd-img {
     display: flex;
@@ -181,6 +190,7 @@ main {
     margin-top: 10px;
 }
 
+/* --- common buttons --- */
 .submit-btn {
     width: 136px;
     height: 44px;
@@ -201,6 +211,7 @@ main {
 .tab-btn {
 
 } */
+ 
 
 /* --- navigation --- */
 header {
@@ -382,6 +393,7 @@ nav ul li a {
     align-items: center;
 }
 
+/* - first-feature - */
 .features .container.first-feature {
     color: #FF9B51;
 
@@ -395,15 +407,39 @@ nav ul li a {
     color: #FF9B51;
 }
 
+/* - second-feature - */
 .features .container.second-feature {
+    padding: 0 140px 0 95px;
     min-height: 596px;
     background-color: var(--background-color-white);
 }
 
-i.fa-circle {
-    padding-top: 5px;
+.container.second-feature .second-feature-template {
+    max-width: 436px;
 }
 
+.container.second-feature .second-feature-template>p {
+    padding-bottom: 46px;
+}
+
+.container.second-feature .second-feature-template .cards p {
+    padding-top: 12px;
+    padding-bottom: 38px;
+}
+
+.second-feature-template .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.second-feature-template .cards .card {
+    display: flex;
+    justify-content: space-between;
+    gap: 38px;
+}
+
+/* - third-feature - */
 .features .container.third-feature {
     padding: 0 95px 0 140px;
     min-height: 524px;
@@ -417,8 +453,6 @@ i.fa-circle {
 .container.third-feature .third-feature-template p {
     padding-bottom: 24px;
 }
-
-
 
 
 /* --- our process --- */
@@ -447,11 +481,6 @@ i.fa-circle {
 .ourProcess-cards .card p {
     text-align: center;
 }
-
-.ourProcess-cards .fa-stack i {
-    padding-top: 5px;
-}
-
 
 /* --- pricing --- */
 .pricing {
