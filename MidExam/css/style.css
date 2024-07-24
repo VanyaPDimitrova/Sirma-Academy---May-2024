@@ -364,6 +364,9 @@ nav ul li a {
 }
 
 
+
+
+
 /* --- features section --- */
 .features {
     padding: 0;
@@ -374,9 +377,9 @@ nav ul li a {
 .features .container {
     padding: 0 140px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .features .container.first-feature {
@@ -402,9 +405,20 @@ i.fa-circle {
 }
 
 .features .container.third-feature {
+    padding: 0 95px 0 140px;
     min-height: 524px;
     background-color: var(--background-color-gray-light);
 }
+
+.container.third-feature .third-feature-template {
+    max-width: 474px;
+}
+
+.container.third-feature .third-feature-template p {
+    padding-bottom: 24px;
+}
+
+
 
 
 /* --- our process --- */
