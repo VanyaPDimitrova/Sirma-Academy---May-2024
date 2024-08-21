@@ -1,3 +1,76 @@
-h1 {
-    color: green;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+html {
+    --main-font: "Montserrat";
+    --second-font: "Oswald";
+}
+
+body {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: var(--main-font);
+}
+
+section {
+    padding: 80px;
+    min-height: 500px;
+    background-color: aqua;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* gap */
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #303030;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: var(--second-font);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.hero {
+    height: 600px;
+    background-image: url("../assets/images/hero.png");
+    background-position: center;
+    background-size: cover;
 }
