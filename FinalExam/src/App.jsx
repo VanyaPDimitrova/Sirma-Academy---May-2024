@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import './App.css';
 import { TOURNAMENT } from './common/tournament';
+import useDataFromCsv from './hooks/useDataFromCsv';
 
 const csvFile = {
   matches: 'matches',
@@ -10,20 +10,7 @@ const csvFile = {
 };
 
 function App() {
-  const [text, setText] = useState('');
-
-  const load = function(data) {
-    fetch(`./data/${data}.csv`)
-    .then(res => res.text())
-    .then(data => setText(data)) 
-  };
-
-  const data = text.split('\n').map(row => row.slice(0, -1).split(','));
-  const dataLastRow = data[data.length - 1];
-
-  if (dataLastRow.length == 1 && dataLastRow[0] == '') {
-    data.pop();
-  }
+  const data = useDataFromCsv(csvFile.matches);
 
   console.log(data);
 
@@ -31,8 +18,7 @@ function App() {
     <>
       <h1>{TOURNAMENT}</h1>
 
-      <button onClick={() => load(csvFile.teams)}>load</button>
-      <pre>{text}</pre>
+
     </>
   );
 }
