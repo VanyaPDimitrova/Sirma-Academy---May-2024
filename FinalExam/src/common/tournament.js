@@ -1,0 +1,1 @@
+export const TOURNAMENT = 'European Football Championship 2024';
