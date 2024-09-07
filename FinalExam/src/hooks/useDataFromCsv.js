@@ -4,14 +4,11 @@ function useDataFromCsv(fileName) {
     const [text, setText] = useState('');
 
     useEffect(() => {
-        const load = function(data) {
+        (function(data) {
           fetch(`./data/${data}.csv`)
           .then(res => res.text())
           .then(data => setText(data)) 
-        };
-
-        load(fileName);
-
+        })(fileName);
     }, [fileName]);
   
     const data = text.split('\n').map(row => row.slice(0, -1).split(','));
@@ -21,7 +18,7 @@ function useDataFromCsv(fileName) {
       data.pop();
     }
 
-    return data;
+    return {text, data};
 };
 
 export default useDataFromCsv;
