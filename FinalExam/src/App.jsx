@@ -10,9 +10,9 @@ const csvFile = {
 };
 
 function App() {
-  const data = useDataFromCsv(csvFile.matches);
+  const matches = useDataFromCsv('matches');
 
-  console.log(data);
+  console.log(matches);
 
   return (  
     <>

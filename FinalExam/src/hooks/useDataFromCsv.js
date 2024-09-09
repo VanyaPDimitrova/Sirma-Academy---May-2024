@@ -7,7 +7,8 @@ function useDataFromCsv(fileName) {
         (function(data) {
           fetch(`./data/${data}.csv`)
           .then(res => res.text())
-          .then(data => setText(data)) 
+          .then(data => setText(data))
+          .catch(err => console.log(err));
         })(fileName);
     }, [fileName]);
   
@@ -18,7 +19,7 @@ function useDataFromCsv(fileName) {
       data.pop();
     }
 
-    return {text, data};
+    return data;
 };
 
 export default useDataFromCsv;
