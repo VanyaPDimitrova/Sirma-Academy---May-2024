@@ -1,7 +1,5 @@
 header {
     position: fixed;
-    width: 100%;
-    background-color: #B5B5B6;
     z-index: 10;
 }
 
@@ -12,9 +10,5 @@ header {
 }
 
 img.logo {
-    width: 9em;
-}
-
-.header h2 {
-    color: #004C9E;
+    width: 6em;
 }

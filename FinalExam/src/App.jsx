@@ -1,6 +1,7 @@
 import useDataFromCsv from './hooks/useDataFromCsv';
 
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 const csvFile = {
   matches: 'matches',
@@ -18,6 +19,10 @@ function App() {
     <>
       <Header />
 
+      <main>
+      </main>
+
+      <Footer />
     </>
   );
 }
