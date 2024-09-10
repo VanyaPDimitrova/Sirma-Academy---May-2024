@@ -1,6 +1,6 @@
-import './App.css';
-import { TOURNAMENT } from './common/tournament';
 import useDataFromCsv from './hooks/useDataFromCsv';
+
+import Header from './components/header/Header';
 
 const csvFile = {
   matches: 'matches',
@@ -16,8 +16,7 @@ function App() {
 
   return (  
     <>
-      <h1>{TOURNAMENT}</h1>
-
+      <Header />
 
     </>
   );

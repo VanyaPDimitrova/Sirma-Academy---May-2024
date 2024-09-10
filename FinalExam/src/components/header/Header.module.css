@@ -1,0 +1,20 @@
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #B5B5B6;
+    z-index: 10;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+img.logo {
+    width: 9em;
+}
+
+.header h2 {
+    color: #004C9E;
+}
