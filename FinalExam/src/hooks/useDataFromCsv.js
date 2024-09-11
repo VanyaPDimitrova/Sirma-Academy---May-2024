@@ -1,30 +1,22 @@
 import { useEffect, useState } from "react";
-import { csvFiles } from '../common/tournament';
 
-function useDataFromCsv() {
-    const [dataFromCsv, setDataFromCsv] = useState({});
+function useDataFromCsv(fileName) {
+    const [dataFromCsv, setDataFromCsv] = useState([]);
 
     useEffect(() => {
-        (function() {
-            for (const fileName of csvFiles) {            
-                fetch(`./data/${fileName}.csv`)
-                .then(res => res.text())
-                .then(result => {
-                    const fileDataArrays = csvTextToArrayOfArrays(result);
-                    
-                    const fileDataObjects = arrayOfArraysToArrayOfObjects(fileDataArrays);
-                    
-                    setDataFromCsv(data => {
-                        return {
-                            ...data,
-                            [fileName]: fileDataObjects,
-                        }
-                    });
-                })
-                .catch(err => console.log(err));
-            }         
-        })();      
-    }, []);
+        (function(fileName) {    
+            fetch(`./data/${fileName}.csv`)
+            .then(res => res.text())
+            .then(result => {
+                const fileDataArrays = csvTextToArrayOfArrays(result);                    
+                const fileDataObjects = arrayOfArraysToArrayOfObjects(fileDataArrays);
+                
+                setDataFromCsv(fileDataObjects);
+            })
+            .catch(err => console.log(err));
+                  
+        })(fileName);      
+    }, [fileName]);
   
     return dataFromCsv;
 };

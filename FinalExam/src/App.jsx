@@ -8,8 +8,10 @@ import Home from './components/home/Home';
 
 
 function App() {
-    const dataFromCsv = useDataFromCsv();
-    console.log(dataFromCsv);
+    const matches = useDataFromCsv('matches');
+    const players = useDataFromCsv('players');
+    const records = useDataFromCsv('records');
+    const teams = useDataFromCsv('teams');
     
     return (  
         <>
@@ -17,7 +19,7 @@ function App() {
 
             <main>
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/' element={<Home matches={matches} teams={teams} />} />
                 </Routes>
             </main>
 
