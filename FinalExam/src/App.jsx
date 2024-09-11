@@ -6,15 +6,8 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
 
-const csvFiles = {
-  matches: 'matches',
-  players: 'players',
-  records: 'records',
-  teams: 'teams',
-};
-
 function App() {
-    const matches = useDataFromCsv('matches');
+    const matches = useDataFromCsv();
 
     console.log(matches);
 
