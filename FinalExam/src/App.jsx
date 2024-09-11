@@ -6,11 +6,11 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './components/home/Home';
 
+
 function App() {
-    const matches = useDataFromCsv();
-
-    console.log(matches);
-
+    const dataFromCsv = useDataFromCsv();
+    console.log(dataFromCsv);
+    
     return (  
         <>
             <Header />
