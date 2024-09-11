@@ -21,9 +21,14 @@ header, footer {
 }
 
 main {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   min-height: 675px;
+  border: 2px solid #DEDEDF;
+  border-radius: 5px;
+  margin-top: 6em;
+  margin-bottom: 1em;
+  padding: 0.5em;
 }
 
 section {

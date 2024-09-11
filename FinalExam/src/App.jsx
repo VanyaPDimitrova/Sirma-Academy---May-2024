@@ -1,9 +1,12 @@
+import { Route, Routes } from 'react-router-dom';
+
 import useDataFromCsv from './hooks/useDataFromCsv';
 
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Home from './components/home/Home';
 
-const csvFile = {
+const csvFiles = {
   matches: 'matches',
   players: 'players',
   records: 'records',
@@ -11,20 +14,23 @@ const csvFile = {
 };
 
 function App() {
-  const matches = useDataFromCsv('matches');
+    const matches = useDataFromCsv('matches');
 
-  console.log(matches);
+    console.log(matches);
 
-  return (  
-    <>
-      <Header />
+    return (  
+        <>
+            <Header />
 
-      <main>
-      </main>
+            <main>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                </Routes>
+            </main>
 
-      <Footer />
-    </>
-  );
+            <Footer />
+        </>
+    );
 }
 
 export default App;
